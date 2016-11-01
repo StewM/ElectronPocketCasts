@@ -1,0 +1,20 @@
+{
+  "name": "ElectronPocketCasts",
+  "version": "1.0.0",
+  "description": "An Electron version of the Pocket Casts web app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "Pocket Casts",
+    "podcasts",
+    "podcast"
+  ],
+  "author": "Stewart Mink",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}
