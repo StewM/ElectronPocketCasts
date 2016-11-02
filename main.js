@@ -33,24 +33,17 @@ function createWindow () {
   // Play/Pause button
   const playPause = globalShortcut.register('MediaPlayPause', () => {
     console.log('MediaPlayPause is pressed')
+    mainWindow.webContents.executeJavaScript("var audioPlayer = document.getElementById('audio_player');var playButton = audioPlayer.getElementsByClassName('play_pause_button')[0];playButton.click();")
   })
 
   if (!playPause) {
     console.log('MediaPlayPause registration failed')
   }
 
-  // Stop Button
-  const stop = globalShortcut.register('MediaStop', () => {
-    console.log('MediaStop is pressed')
-  })
-
-  if (!stop) {
-    console.log('MediaStop registration failed')
-  }
-
   // Next Track Button
   const nextTrack = globalShortcut.register('MediaNextTrack', () => {
     console.log('MediaNextTrack is pressed')
+    mainWindow.webContents.executeJavaScript("var audioPlayer = document.getElementById('audio_player');var forwardButton = audioPlayer.getElementsByClassName('skip_forward_button')[0];forwardButton.click();")
   })
 
   if (!nextTrack) {
@@ -60,6 +53,7 @@ function createWindow () {
   // Previous Track Button
   const prevTrack = globalShortcut.register('MediaPreviousTrack', () => {
     console.log('MediaPreviousTrack is pressed')
+    mainWindow.webContents.executeJavaScript("var audioPlayer = document.getElementById('audio_player');var backButton = audioPlayer.getElementsByClassName('skip_back_button')[0];backButton.click();")
   })
 
   if (!prevTrack) {
