@@ -30,12 +30,40 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadURL('http://play.pocketcasts.com/web')
 
-  const ret = globalShortcut.register('CommandOrControl+X', () => {
-    console.log('CommandOrControl+X is pressed')
+  // Play/Pause button
+  const playPause = globalShortcut.register('MediaPlayPause', () => {
+    console.log('MediaPlayPause is pressed')
   })
 
-  if (!ret) {
-    console.log('registration failed')
+  if (!playPause) {
+    console.log('MediaPlayPause registration failed')
+  }
+
+  // Stop Button
+  const stop = globalShortcut.register('MediaStop', () => {
+    console.log('MediaStop is pressed')
+  })
+
+  if (!stop) {
+    console.log('MediaStop registration failed')
+  }
+
+  // Next Track Button
+  const nextTrack = globalShortcut.register('MediaNextTrack', () => {
+    console.log('MediaNextTrack is pressed')
+  })
+
+  if (!nextTrack) {
+    console.log('MediaNextTrack registration failed')
+  }
+
+  // Previous Track Button
+  const prevTrack = globalShortcut.register('MediaPreviousTrack', () => {
+    console.log('MediaPreviousTrack is pressed')
+  })
+
+  if (!prevTrack) {
+    console.log('MediaPreviousTrack registration failed')
   }
 
   // Open the DevTools.
